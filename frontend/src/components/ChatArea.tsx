@@ -88,32 +88,9 @@ const EmptyState: React.FC = () => {
       <h2 className="text-2xl font-semibold text-light-text dark:text-dark-text mb-3">
         Добро пожаловать в PromptCraft!
       </h2>
-      <p className="text-light-text-secondary dark:text-dark-text-secondary mb-8 max-w-md">
+      <p className="text-light-text-secondary dark:text-dark-text-secondary max-w-md">
         Опишите вашу идею, и я создам для вас идеальный промпт.
       </p>
-
-      <div className="space-y-3 w-full max-w-md">
-        <p className="text-sm font-medium text-light-text dark:text-dark-text mb-2">
-          💡 Несколько примеров для вдохновения:
-        </p>
-
-        {[
-          'Бизнес-план для кофейни',
-          'Резюме на позицию разработчика',
-          'Идеи для YouTube канала',
-          'План статьи про искусственный интеллект',
-        ].map((example, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: index * 0.1 }}
-            className="p-3 rounded-lg bg-light-ai-bubble dark:bg-dark-ai-bubble text-left text-sm text-light-text dark:text-dark-text"
-          >
-            • {example}
-          </motion.div>
-        ))}
-      </div>
     </motion.div>
   );
 };
